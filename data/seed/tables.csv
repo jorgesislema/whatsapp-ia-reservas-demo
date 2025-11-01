@@ -1,0 +1,17 @@
+number,capacity,area,special_features
+1,2,salon_principal,
+2,4,salon_principal,
+3,6,salon_principal,
+4,4,salon_principal,
+5,8,salon_principal,
+6,2,salon_principal,
+T1,2,terraza,Vista al jardín
+T2,4,terraza,Vista al jardín
+T3,6,terraza,Vista al jardín
+T4,8,terraza,Vista al jardín y toldo
+T5,2,terraza,Vista al jardín
+P1,10,salon_privado,Salón privado con proyector
+P2,12,salon_privado,Salón privado con karaoke
+B1,2,barra,Asientos altos
+B2,2,barra,Asientos altos
+B3,3,barra,Asientos altos con vista a cocina
