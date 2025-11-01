@@ -1,0 +1,27 @@
+# Versión simplificada de requirements para solucionar problemas de instalación
+# Usar este archivo si requirements.txt falla: pip install -r requirements-simple.txt
+
+# Framework básico
+fastapi
+uvicorn[standard]
+
+# Configuración
+pydantic
+python-dotenv
+
+# Base de datos
+sqlalchemy
+
+# HTTP Client
+httpx
+
+# ML básico (instalar solo lo esencial)
+scikit-learn
+joblib
+
+# Testing
+pytest
+pytest-asyncio
+
+# Nota: pandas se puede instalar por separado si es necesario:
+# pip install pandas --only-binary=all --no-build-isolation
