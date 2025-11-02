@@ -1,53 +1,48 @@
-# Información del Restaurante Demo
+# Información del Restaurante
 
-## Datos de Contacto
+## Dirección
+Av. Corrientes 1234, San Telmo
+Ciudad Autónoma de Buenos Aires
+Código Postal: C1043ABC
 
-### Ubicación
-**Dirección:** Av. Corrientes 1234, Ciudad Autónoma de Buenos Aires, Argentina
-**Barrio:** San Telmo
-**Código Postal:** C1043ABC
+## Horarios por día
+Lunes a Jueves: 12:00–23:00
+Viernes y Sábado: 12:00–23:59
+Domingo: 12:00–22:00
 
-### Teléfonos
-- **Reservas:** +54 11 4123-4567
-- **WhatsApp:** +54 11 3456-7890
-- **Administración:** +54 11 4123-4568
+## Estacionamiento
+- Estacionamiento gratuito en la cuadra
+- Garage público a 2 cuadras (Defensa 567)
+- Valet parking disponible fines de semana
+- Bicicletas: rack seguro en la entrada
 
-### Email
-- **General:** info@restaurantedemo.com
-- **Reservas:** reservas@restaurantedemo.com
-- **Eventos:** eventos@restaurantedemo.com
+## Contacto
+- Teléfono reservas: +54 11 4123-4567
+- WhatsApp: +54 11 3456-7890
+- Email: info@restaurantedemo.com
+- Instagram: @restaurantedemo
 
-### Redes Sociales
-- **Instagram:** @restaurantedemo
-- **Facebook:** Restaurante Demo Buenos Aires
-- **TikTok:** @restaurantedemo_ba
+## Transporte público
+- Subte: Línea C (Estación San Juan)
+- Líneas que pasan cerca: 8, 17, 29, 64, 86
+- Parada más cercana: Av. Corrientes y Defensa
 
-## Horarios de Atención
+## Capacidad
+- Salón principal: 80 personas
+- Terraza: 40 personas con vista al jardín
+- Salón privado: hasta 20 personas
+- Barra: 8 personas
 
-### Días de Semana
-**Lunes a Viernes:**
-- Almuerzo: 12:00 - 15:30
-- Cena: 19:00 - 23:30
-- Cocina cierra: 23:00
+## Accesibilidad
+- Entrada accesible para sillas de ruedas
+- Baño adaptado disponible
+- Menú en braille bajo pedido
 
-### Fines de Semana
-**Sábados:**
-- Almuerzo: 12:00 - 16:00
-- Cena: 19:00 - 00:30
-- Cocina cierra: 00:00
-
-**Domingos:**
-- Almuerzo: 12:00 - 16:00
-- Cena: 19:00 - 23:00
-- Cocina cierra: 22:30
-
-### Días Especiales
-- **24 de Diciembre:** 12:00 - 18:00 (Nochebuena)
-- **25 de Diciembre:** CERRADO (Navidad)
-- **31 de Diciembre:** 19:00 - 02:00 (Nochevieja - menú especial)
-- **1 de Enero:** CERRADO (Año Nuevo)
-
-## Sobre el Restaurante
+## Ambiente
+- Música ambiente jazz y bossa nova
+- Iluminación cálida y acogedora
+- Decoración contemporánea con toques vintage
+- Aire acondicionado y calefacción
 
 ### Historia
 Restaurante Demo abrió sus puertas en 2019 en el corazón de San Telmo, con la misión de ofrecer una experiencia gastronómica que combine la tradición argentina con toques de cocina internacional. Nuestro chef ejecutivo, con más de 15 años de experiencia, ha creado un menú que celebra los sabores locales con técnicas modernas.
