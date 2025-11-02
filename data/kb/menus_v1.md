@@ -1,106 +1,69 @@
-# Menú del Restaurante Demo
+# Menú del Restaurante
+
+## Platos sin gluten
+- Bife de chorizo premium con papas rústicas
+- Salmón grillado con risotto de hongos
+- Provoleta a la parrilla
+- Ensalada mixta
+- Tabla de quesos y dulces
+- Flan casero con dulce de leche
+
+## Vegetarianos
+- Pizza artesanal Margherita
+- Pizza cuatro quesos con miel
+- Pizza vegetariana con berenjena
+- Risotto de hongos porcini
+- Provoleta a la parrilla
+- Empanadas de humita con queso
+- Empanadas caprese
+- Pasta casera con salsa a elección
+
+## Veganos
+- Ensalada mixta (sin queso)
+- Pizza vegetariana (sin queso)
+- Pasta con salsa pomodoro
+- Verduras salteadas
+
+## Alergenos por plato
+**Tiramisú**: lactosa, huevos, alcohol
+**Pizza margherita**: gluten, lactosa
+**Pasta casera**: gluten, puede contener huevos
+**Empanadas**: gluten
+**Tabla de fiambres**: lactosa, puede contener gluten
+**Flan casero**: lactosa, huevos
+**Volcán de chocolate**: gluten, lactosa, huevos
 
 ## Entradas
+- Tabla de fiambres artesanales: $3500
+- Empanadas gourmet (3 unidades): $2800
+- Provoleta a la parrilla: $2200
 
-### Tabla de Fiambres Artesanales
-Selección de embutidos de la casa, quesos de cabra y vaca, aceitunas, pickles y panes caseros.
-Precio: $3500
-
-### Empanadas Gourmet (3 unidades)
-- Carne cortada a cuchillo con especias andinas
-- Pollo con verduras de estación
-- Humita con queso de cabra
-- Caprese con albahaca fresca
-Precio: $2800
-
-### Provoleta a la Parrilla
-Queso provolone grillado con oregano, tomates cherry y reducción de aceto balsámico.
-Precio: $2200
-
-## Platos Principales
-
-### Bife de Chorizo Premium
-Corte de 350g a la parrilla, con guarnición de papas rústicas y ensalada mixta.
-Precio: $8500
-
-### Salmón Grillado
-Filete de salmón con costra de hierbas, risotto de hongos y verduras salteadas.
-Precio: $7200
-
-### Pasta Casera del Día
-Consultar opciones disponibles. Incluye salsa a elección y queso parmesano.
-Precio: $4500
-
-### Pizza Artesanal
-- Margherita con albahaca fresca
-- Prosciutto con rúcula y parmesano
-- Cuatro quesos con miel
-- Vegetariana con berenjena y zucchini
-Precio: $3800 - $4500
-
-### Risotto de Hongos Porcini
-Arroz cremoso con hongos de estación, queso parmesano y trufa.
-Precio: $5200
+## Platos principales
+- Bife de chorizo premium: $8500
+- Salmón grillado: $7200
+- Risotto de hongos porcini: $5200
+- Pasta casera del día: $4500
+- Pizza artesanal: $3800-$4500
 
 ## Postres
-
-### Tiramisú de la Casa
-Clásico postre italiano con café y mascarpone.
-Precio: $1800
-
-### Flan Casero con Dulce de Leche
-Tradicional flan con dulce de leche artesanal y crema.
-Precio: $1500
-
-### Volcán de Chocolate
-Bizcocho de chocolate caliente con helado de vainilla.
-Precio: $2100
-
-### Tabla de Quesos y Dulces
-Selección de quesos con membrillo, miel y frutos secos.
-Precio: $2800
+- Volcán de chocolate: $2100
+- Tabla de quesos y dulces: $2800
+- Tiramisú de la casa: $1800
+- Flan casero: $1500
 
 ## Bebidas
-
-### Vinos
-- Copa de vino tinto/blanco de la casa: $900
-- Botella Malbec reserva: $4500
-- Botella Sauvignon Blanc: $3800
-- Champagne nacional: $5200
-
-### Cervezas
-- Cerveza artesanal tirada (500ml): $1200
-- Cerveza importada: $1800
-
-### Bebidas sin Alcohol
+- Copa de vino tinto/blanco: $900
+- Cerveza artesanal: $1200
 - Jugos naturales: $800
-- Gaseosas: $600
-- Agua mineral: $500
 - Café expreso: $400
-- Té de hierbas: $450
-
-### Tragos Clásicos
 - Fernet con Coca: $1500
-- Gin Tonic: $1800
-- Mojito: $1600
-- Whisky sour: $2000
 
-## Menú Ejecutivo (Lunes a Viernes 12:00-16:00)
+## Menú ejecutivo
+**Lunes a Viernes 12:00-16:00**
+- Opción 1: $2800 (entrada + plato + postre + bebida)
+- Opción 2: $3200 (entrada + plato premium + postre + bebida)
 
-### Opción 1 - $2800
-Entrada + Plato principal + Postre + Bebida
-
-### Opción 2 - $3200
-Entrada + Plato principal premium + Postre + Bebida
-
-Incluye: agua, gaseosa o café. Otras bebidas con costo adicional.
-
-## Notas Especiales
-
-- Todos los precios están expresados en pesos argentinos e incluyen IVA
-- Consultanos por opciones vegetarianas, veganas y celíacas
-- Los platos pueden variar según disponibilidad de ingredientes
-- Aceptamos efectivo, tarjetas de débito y crédito
-- Descuento 10% pagando en efectivo
-
-*Última actualización: Octubre 2024*
+## Horarios por día
+Lunes a Jueves: 12:00–23:00
+Viernes y Sábado: 12:00–23:59
+Domingo: 12:00–22:00
