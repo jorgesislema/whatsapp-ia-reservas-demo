@@ -1,53 +1,39 @@
-# Políticas del Restaurante Demo
+# Políticas del Restaurante
 
-## Política de Reservas
+## Cancelación
+- Reservas de 1-4 personas: cancelar hasta 2 horas antes
+- Reservas de 5-8 personas: cancelar hasta 4 horas antes
+- Reservas de más de 8 personas: cancelar hasta 24 horas antes
+- Sin penalización por cancelación dentro del plazo
+- No show: advertencia primera vez, garantía segunda vez
 
-### Horarios de Reserva
-- Almuerzo: Lunes a viernes de 12:00 a 15:00 horas
-- Cena: Todos los días de 19:00 a 22:30 horas
-- No aceptamos reservas para el horario de 15:00 a 19:00
+## Tiempo de espera
+- Tolerancia: 15 minutos para grupos pequeños
+- Tolerancia: 10 minutos para grupos grandes (más de 6 personas)
+- Pasado el tiempo, la mesa se asigna a otros comensales
+- Confirmar reserva 2 horas antes por WhatsApp o teléfono
 
-### Anticipación Requerida
-- Reservas para el mismo día: hasta 2 horas antes del horario solicitado
-- Reservas con más de 8 personas: mínimo 24 horas de anticipación
-- Reservas para fechas especiales (Día de los Enamorados, Navidad, Año Nuevo): mínimo 1 semana de anticipación
+## Notas especiales
+- Menú ejecutivo: solo de lunes a viernes 12:00-16:00
+- Grupos grandes: mínimo 24 horas de anticipación
+- Fechas especiales: mínimo 1 semana de anticipación
+- Descuento 10% pagando en efectivo
+- No división de cuenta para grupos superiores a 6 personas
 
-### Confirmación de Reservas
-- Todas las reservas deben confirmarse 2 horas antes del horario establecido
-- Reservas no confirmadas serán canceladas automáticamente
-- La confirmación puede realizarse por WhatsApp o teléfono
-
-### Tolerancia y Puntualidad
-- Tiempo de tolerancia: 15 minutos
-- Pasado este tiempo, la mesa podrá ser asignada a otros comensales
-- Para grupos grandes (más de 6 personas), la tolerancia es de 10 minutos
-
-## Política de Cancelaciones
-
-### Cancelación Gratuita
-- Reservas de 1-4 personas: pueden cancelarse hasta 2 horas antes
-- Reservas de 5-8 personas: pueden cancelarse hasta 4 horas antes
-- Reservas de más de 8 personas: pueden cancelarse hasta 24 horas antes
-
-### Penalizaciones por No Show
-- Primera vez: advertencia
-- Segunda vez: se requiere garantía con tarjeta para futuras reservas
-- Tercera vez: suspensión temporal del servicio de reservas
-
-## Política de Pagos
-
-### Métodos de Pago Aceptados
+## Métodos de pago
 - Efectivo (descuento 10%)
-- Tarjetas de débito
-- Tarjetas de crédito (Visa, Mastercard, American Express)
+- Tarjetas de débito y crédito
 - Transferencias bancarias
-- Billeteras digitales (Mercado Pago, MODO)
+- Mercado Pago y MODO
 
-### Facturación
-- Todas las consumiciones incluyen IVA
-- Facturas A disponibles para responsables inscriptos
-- Facturas B para consumidores finales
-- No se realizan divisiones de cuenta en grupos superiores a 6 personas
+## Menores de 12 años
+- 50% de descuento en menú infantil
+- Sillas altas disponibles (sujeto a disponibilidad)
+- Menú especial para niños disponible
+
+## Política de comportamiento
+- Los padres son responsables del comportamiento de sus hijos
+- Mantenemos un ambiente familiar y respetuoso
 
 ## Política de Eventos y Grupos
 
