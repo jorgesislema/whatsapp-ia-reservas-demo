@@ -1,0 +1,6 @@
+name,category,price,allergens
+Ensalada verde,entradas,6.5,
+Pollo a la parrilla,platos,10.9,
+Pasta al pesto,platos,9.5,"gluten,nueces"
+Pizza margarita,platos,8.9,"gluten,lactosa"
+Tarta de queso,postres,5.0,lactosa
