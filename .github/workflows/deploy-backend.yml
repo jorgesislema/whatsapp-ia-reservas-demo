@@ -1,0 +1,135 @@
+name: Deploy Backend to Cloud Run (Manual)
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Environment to deploy to'
+        required: true
+        default: 'staging'
+        type: choice
+        options:
+          - staging
+          - production
+      revision_traffic_percent:
+        description: 'Traffic % for new revision (0-100, 0=no traffic)'
+        required: true
+        default: '10'
+
+jobs:
+  deploy:
+    name: Deploy Backend
+    runs-on: ubuntu-latest
+    environment: ${{ github.event.inputs.environment }}
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Cloud SDK
+        uses: google-github-actions/setup-gcloud@v1
+        with:
+          service_account_key: ${{ secrets.GCP_SA_KEY }}
+          project_id: ${{ secrets.GCP_PROJECT_ID }}
+          export_default_credentials: true
+
+      - name: Configure Docker
+        run: |
+          gcloud auth configure-docker us-central1-docker.pkg.dev
+
+      - name: Build Docker image
+        run: |
+          IMAGE_URL="us-central1-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/wa-app/wa-backend:${{ github.sha }}"
+          docker build -t "$IMAGE_URL" -t "us-central1-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/wa-app/wa-backend:latest" .
+          docker push "$IMAGE_URL"
+          docker push "us-central1-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/wa-app/wa-backend:latest"
+
+      - name: Deploy to Cloud Run (Blue/Green)
+        run: |
+          IMAGE_URL="us-central1-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/wa-app/wa-backend:${{ github.sha }}"
+          
+          # Deploy nueva revisión (0% tráfico inicialmente)
+          gcloud run deploy wa-backend \
+            --image="$IMAGE_URL" \
+            --region=us-central1 \
+            --platform=managed \
+            --cpu=1 \
+            --memory=512Mi \
+            --max-instances=3 \
+            --timeout=600s \
+            --service-account=sa-backend@${{ secrets.GCP_PROJECT_ID }}.iam.gserviceaccount.com \
+            --vpc-connector=wa-serverless-vpc \
+            --vpc-connector-egress-settings=all \
+            --no-traffic \
+            --set-env-vars="ENVIRONMENT=${{ github.event.inputs.environment }},DEPLOYMENT_ID=${{ github.sha }}" \
+            --set-secrets="WA_APP_SECRET=sec-wa-app-secret:latest,WA_TOKEN=sec-wa-token:latest,WA_VERIFY_TOKEN=sec-wa-verify-token:latest,ADMIN_TOKEN=sec-admin-token:latest"
+
+      - name: Get revision name
+        id: get_revision
+        run: |
+          REVISION=$(gcloud run services describe wa-backend --region=us-central1 --format='value(status.latestRevision)')
+          echo "revision=$REVISION" >> $GITHUB_OUTPUT
+          echo "Nueva revisión: $REVISION"
+
+      - name: Run smoke tests
+        id: smoke_test
+        continue-on-error: true
+        run: |
+          SERVICE_URL=$(gcloud run services describe wa-backend --region=us-central1 --format='value(status.url)')
+          
+          echo "Testing health endpoint..."
+          curl -f "$SERVICE_URL/healthz" || exit 1
+          
+          echo "Testing metrics endpoint..."
+          curl -f "$SERVICE_URL/metrics" || exit 1
+          
+          echo "✅ Smoke tests passed"
+
+      - name: Route traffic to new revision
+        if: steps.smoke_test.outcome == 'success'
+        run: |
+          REVISION=${{ steps.get_revision.outputs.revision }}
+          TRAFFIC_PERCENT=${{ github.event.inputs.revision_traffic_percent }}
+          
+          # Route X% tráfico a nueva revisión
+          gcloud run services update-traffic wa-backend \
+            --to-revisions "$REVISION=$TRAFFIC_PERCENT" \
+            --region=us-central1
+
+      - name: Deployment summary
+        run: |
+          echo "🚀 Deployment Summary"
+          echo "====================="
+          echo "Service: wa-backend"
+          echo "Environment: ${{ github.event.inputs.environment }}"
+          echo "Revision: ${{ steps.get_revision.outputs.revision }}"
+          echo "Traffic %: ${{ github.event.inputs.revision_traffic_percent }}"
+          echo "Status: ${{ job.status }}"
+          
+          # Get service URL
+          SERVICE_URL=$(gcloud run services describe wa-backend --region=us-central1 --format='value(status.url)')
+          echo "Service URL: $SERVICE_URL"
+
+      - name: Comment PR/Issue with deployment status
+        if: github.event_name == 'pull_request'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: '🚀 Backend deployed!\n- Revision: ${{ steps.get_revision.outputs.revision }}\n- Traffic: ${{ github.event.inputs.revision_traffic_percent }}%\n- Status: ${{ job.status }}'
+            })
+
+      - name: Notify on failure
+        if: failure()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: '❌ Deployment failed!\n- Check logs: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}'
+            })
